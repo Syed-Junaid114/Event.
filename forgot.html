@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        body, form, button, h1 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            border: 3px solid black;
+            margin: 13px;
+            padding: 12px;
+            width: 50%;
+            border-radius: 1.2rem;
+            background-color: rgb(128, 204, 211);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: rgb(26, 25, 85);
+            margin-top: 12px;
+            padding: 12px;
+        }
+
+        form {
+            width: 80%;
+        }
+
+        div form input {
+            margin: 0.3vw;
+            height: 15px;
+            padding: 8px;
+            width: 28vw;
+            border: 2px solid black;
+            border-radius: 0.7rem;
+            justify-content: left;
+        }
+
+        button {
+            margin: 0;
+            padding: 6px;
+            width: 11vw;
+            background-color: rgb(82, 64, 150);
+            border-radius: 0.7rem;
+        }
+    </style>
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(182, 191, 197); ">
+    <div>
+        <u>
+            <h1>Forgot Password</h1>
+        </u>
+        <form method="POST" onsubmit="return validateEmail();">
+            <input type="email" placeholder="Enter your email" id="email" name="email" required><br>
+            <button type="submit">Reset Password</button>
+        </form>
+    </div>
+</body>
+
+</html>

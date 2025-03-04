@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <script src="script.js" defer></script>
+    <style>
+        body, form, button, h1 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            border: 3px solid black;
+            margin: 13px;
+            padding: 12px;
+            width: 50%;
+            border-radius: 1.2rem;
+            background-color: rgb(128, 204, 211);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: rgb(26, 25, 85);
+            margin-top: 12px;
+            padding: 12px;
+        }
+
+        form {
+            width: 80%;
+        }
+
+        div form input {
+            margin: 0.3vw;
+            height: 15px;
+            padding: 8px;
+            width: 28vw;
+            border: 2px solid black;
+            border-radius: 0.7rem;
+            justify-content: left;
+        }
+
+        button {
+            margin: 0;
+            padding: 14px;
+            width: 9vw;
+            background-color: rgb(231, 20, 20);
+            border-radius: 0.7rem;
+        }
+    </style>
+</head>
+
+<body style="background:rgb(80, 70, 70);">
+    <div>
+        <u> <h1>Register Form</h1> </u>
+        <form method="post">
+            <input type="text" placeholder="Email" id="email" name="email" required><br>
+            <input type="number" placeholder="Phone no." id="num" name="phone" required><br>
+            <input type="password" placeholder="Password" id="password" name="password" required><br>
+            <input type="password" placeholder="Confirm password" id="cpass" name="confirm_password" required><br>
+            <button type="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
